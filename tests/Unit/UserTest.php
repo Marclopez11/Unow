@@ -16,7 +16,7 @@ class UserTest extends TestCase
     	$numbers = range(1, 1000);
 		shuffle($numbers);
         $payload=[
-        	'name' => "Unow Modifiado",
+        	'name' => "unow",
             'email' => "demouser_".uniqid()."@gmail.com",
             'phone' =>  $numbers[0]."837536".$numbers[1],
             'password' => "123456",
@@ -28,7 +28,7 @@ class UserTest extends TestCase
     public function test_login_user_api()
     {
         $payload=[
-        	'email' => "unowModificado@gmail.com",
+        	'email' => "unow@gmail.com",
             'password' => "123456"
         ];
         $response=$this->json('POST','api/user/login',$payload)->assertStatus(200);

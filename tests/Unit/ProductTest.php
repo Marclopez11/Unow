@@ -28,7 +28,7 @@ class ProductTest extends TestCase
     	$response = $this->actingAs($user, 'api')->json('POST','api/product/add',$payload)->assertStatus(200);
     }
 
-    /*public function test_update_prouct()
+    public function test_update_prouct()
     {
         $numbers = range(1, 1000);
 		shuffle($numbers);
@@ -43,7 +43,7 @@ class ProductTest extends TestCase
             'quantity' =>  $product->quantity
         ];
     	$response = $this->actingAs($user, 'api')->json('POST','api/product/update/'.$product->id,$payload)->assertStatus(200);
-    }*/
+    }
 
     public function test_delete_prouct()
     {
